@@ -49,7 +49,7 @@ document.getElementById("nextBtn").onclick = () => {
   // kraj cele lekcije
   if (deoIndex >= lesson.deloviLekcije.length) {
     document.getElementById("theoryContent").innerHTML =
-      "<h3>Kraj teorije. Slede pitanja 🙂. Ovo je verzija od 1.maja26 23:00</h3>";
+      "<h3>Kraj teorije. Slede pitanja 🙂. Ovo je verzija od 1.maja26 23:00. lessonData[meta].license</h3>";
     document.getElementById("nextBtn").disabled = true;
     return;
   }
@@ -57,7 +57,7 @@ document.getElementById("nextBtn").onclick = () => {
   renderTheory();
 };
 
-//UČITAVANJE LEKCIJE (čisto, bez testa)
+//UČITAVANJE LEKCIJE u lessonData - ako nema gresaka pri ucitavanju, rezultat je: globalna promenljiva lessonData dobija vrednost, a to je pokazivac na sadrzaj fajla `lessons/${currentLessonFile}`
 async function loadLesson() {
   try {
     const response = await fetch(`lessons/${currentLessonFile}`);
