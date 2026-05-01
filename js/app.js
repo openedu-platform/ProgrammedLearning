@@ -2,7 +2,7 @@ let currentLanguage = "sr";  //sr ili en za sada, currentLanguage i ostale su gl
 let currentLessonFile = "racunarstvo/introductionComputerScience.json"; //osnove_racunara.json ili computer_basics.json za sada ili lessons/racunarstvo/introductionComputerScience.json
 let lessonData = null;
 
-// stanje renderera - NOVO 17mar 09_45
+// stanje renderera - NOVO 1.maj 19_56
 let deoIndex = 0;      // koji deo lekcije
 let teorijaIndex = 0; // koja teorija u tom delu
 
@@ -98,8 +98,8 @@ async function loadLesson() {
 
 // Init
 window.addEventListener("load", () => {
-  //loadLesson();
-  loadLesson(currentLanguage, currentLessonFile);
+  loadLesson();
+  //loadLesson(currentLanguage, currentLessonFile);
 });
 
 
