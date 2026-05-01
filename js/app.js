@@ -2,7 +2,7 @@ let currentLanguage = "sr";  //sr ili en za sada, currentLanguage i ostale su gl
 let currentLessonFile = "racunarstvo/introductionComputerScience.json"; //osnove_racunara.json ili computer_basics.json za sada ili lessons/racunarstvo/introductionComputerScience.json
 let lessonData = null;
 
-// stanje renderera - NOVO 1.maj 23_34
+// stanje renderera - NOVO 1.maj 23_40
 let deoIndex = 0;      // koji deo lekcije
 let teorijaIndex = 0; // koja teorija u tom delu
 
@@ -13,8 +13,8 @@ function renderTheory() {
   const teorija = deo.teorija[teorijaIndex];
 
   // Naslovi
-//  document.getElementById("lessonTitle").innerText = lesson.naslov;
-  document.getElementById("lessonTitle").innerText = lessonData.meta.license;  //proba
+  document.getElementById("lessonTitle").innerText = lesson.naslov;
+  //document.getElementById("lessonTitle").innerText = lessonData.meta.license;  //proba
   document.getElementById("partTitle").innerText = deo.nazivDelaLekcije;
 
   // Sadržaj teorije
@@ -50,7 +50,7 @@ document.getElementById("nextBtn").onclick = () => {
   // kraj cele lekcije
   if (deoIndex >= lesson.deloviLekcije.length) {
     document.getElementById("theoryContent").innerHTML =
-      "<h3>Kraj teorije. Slede pitanja 🙂. Ovo je verzija od 1.maja26 23:34</h3>";
+      "<h3>Kraj teorije. Slede pitanja 🙂. Ovo je verzija od 1.maja26 23:40</h3>";
     document.getElementById("nextBtn").disabled = true;
     return;
   }
