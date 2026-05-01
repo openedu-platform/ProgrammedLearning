@@ -13,7 +13,8 @@ function renderTheory() {
   const teorija = deo.teorija[teorijaIndex];
 
   // Naslovi
-  document.getElementById("lessonTitle").innerText = lesson.naslov;
+//  document.getElementById("lessonTitle").innerText = lesson.naslov;
+  document.getElementById("lessonTitle").innerText = lessonData[meta].license; //iskomentarisati
   document.getElementById("partTitle").innerText = deo.nazivDelaLekcije;
 
   // Sadržaj teorije
@@ -49,7 +50,7 @@ document.getElementById("nextBtn").onclick = () => {
   // kraj cele lekcije
   if (deoIndex >= lesson.deloviLekcije.length) {
     document.getElementById("theoryContent").innerHTML =
-      "<h3>Kraj teorije. Slede pitanja 🙂. Ovo je verzija od 1.maja26 23:00. lessonData[meta].license</h3>";
+      "<h3>Kraj teorije. Slede pitanja 🙂. Ovo je verzija od 1.maja26 23:20</h3>";
     document.getElementById("nextBtn").disabled = true;
     return;
   }
