@@ -68,7 +68,7 @@ document.getElementById("nextBtn").onclick = () => {
   // kraj cele lekcije
   if (deoIndex >= lesson.deloviLekcije.length) {
     document.getElementById("theoryContent").innerHTML =
-      "<h3>Kraj teorije. Slede pitanja 🙂</h3>";
+      "<h3>Kraj teorije. Slede pitanja 🙂. Ovo je verzija od 1.maja26 20:16</h3>";
     document.getElementById("nextBtn").disabled = true;
     return;
   }
