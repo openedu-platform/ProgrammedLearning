@@ -6,25 +6,6 @@ let lessonData = null;
 let deoIndex = 0;      // koji deo lekcije
 let teorijaIndex = 0; // koja teorija u tom delu
 
-// Učitaj lekciju iz JSON fajla / ovo sam izbacio, funkcija ispod radi isto
-/*async function loadLesson(language, lessonFile) {
-  //const path = `lessons/${language}/${lessonFile}`;
-  const path = `lessons/${currentLessonFile}`;
-
-  try {
-    const response = await fetch(path);
-    if (!response.ok) {
-      throw new Error("Lesson not found");
-    }
-
-    lessonData = await response.json();
-    //showLessonInfo();
-  } catch (error) {
-    console.error("Greška pri učitavanju lekcije: "+error, error);
-    alert("Lekcija ne može da se učita... " + path);
-  };
-}*/
-
 //RENDERER TEORIJE (KLJUČNI DEO), ucitava teoriju i prikazuje vizuelno
 function renderTheory() {
   const lesson = lessonData[currentLanguage];
@@ -94,12 +75,9 @@ async function loadLesson() {
   }
 }
 
-//window.onload = loadLesson;
-
 // Init
 window.addEventListener("load", () => {
   loadLesson();
-  //loadLesson(currentLanguage, currentLessonFile);
 });
 
 
