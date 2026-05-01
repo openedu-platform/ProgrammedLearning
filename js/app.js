@@ -14,7 +14,7 @@ function renderTheory() {
 
   // Naslovi
 //  document.getElementById("lessonTitle").innerText = lesson.naslov;
-  document.getElementById("lessonTitle").innerText = lessonData[meta].license; //iskomentarisati
+  //document.getElementById("lessonTitle").innerText = lessonData[meta].license; //iskomentarisati
   document.getElementById("partTitle").innerText = deo.nazivDelaLekcije;
 
   // Sadržaj teorije
