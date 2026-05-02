@@ -1,8 +1,8 @@
 let currentLanguage = "sr";  //sr ili en za sada, currentLanguage i ostale su globalne promenljive
-let currentLessonFile = "racunarstvo/introductionComputerScience.json"; //osnove_racunara.json ili computer_basics.json za sada ili lessons/racunarstvo/introductionComputerScience.json
-let lessonData = null;
+let currentLessonFile = "racunarstvo/introductionComputerScience.json"; // VAZNO!!! Putanja do fajla sa sadrzajem lekcije
+let lessonData = null; // VAZNO!!! POCETNA VREDNOST POKAZIVACA NA SADRZAJ FAJLA SA LEKCIJOM
 
-// stanje renderera - NOVO 1.maj 23_40
+// stanje renderera - NOVO 2.maj 23_30
 let deoIndex = 0;      // koji deo lekcije
 let teorijaIndex = 0; // koja teorija u tom delu
 
@@ -14,7 +14,7 @@ function renderTheory() {
 
   // Naslovi
   document.getElementById("lessonTitle").innerText = lesson.naslov;
-  //document.getElementById("lessonTitle").innerText = lessonData.meta.license;  //proba
+  //document.getElementById("lessonTitle").innerText = lessonData.meta.license;  // VAZNO!!! Ovako se ucitava podatak iz lekcije, i smesta u lessonTitle
   document.getElementById("partTitle").innerText = deo.nazivDelaLekcije;
 
   // Sadržaj teorije
@@ -80,5 +80,3 @@ async function loadLesson() {
 window.addEventListener("load", () => {
   loadLesson();
 });
-
-
