@@ -50,7 +50,7 @@ document.getElementById("nextBtn").onclick = () => {
   // kraj cele lekcije
   if (deoIndex >= lesson.deloviLekcije.length) {
     document.getElementById("theoryContent").innerHTML =
-      "<h3>Kraj teorije. Slede pitanja 🙂. Ovo je verzija od 1.maja26 23:40</h3>";
+      "<h3>Kraj teorije. Slede pitanja 🙂. Ovo je verzija od 2.maja26. 23:35</h3>";
     document.getElementById("nextBtn").disabled = true;
     return;
   }
